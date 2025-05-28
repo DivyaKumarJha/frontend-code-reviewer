@@ -1,0 +1,78 @@
+*{
+  margin: 0% ;
+  padding : 0%;
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap : 1rem;
+  /* flex-direction: column; */
+  padding: 1rem;
+}
+main .left,main .right { 
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+main .left{
+  background: #0e0e0e;
+  position: relative;
+}
+
+main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgb(205, 201, 214);
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+.left .code, .code pre, code pre code{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #000000;
+}
+main .right {
+  height: 100%;
+  overflow-x: auto;              /* enable horizontal scroll */
+  overflow-y: auto;              /* enable vertical scroll */
+  padding: 10px;
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  font-family: "Fira code", monospace;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  white-space: pre-wrap;         /* preserve line breaks, wrap lines */
+  scrollbar-width: none;         /* Firefox */
+}
+
+main .right::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+.loader {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 2rem;
+  color: #aaa;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
